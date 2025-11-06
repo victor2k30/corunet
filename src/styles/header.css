@@ -5,6 +5,7 @@ header {
     top: 0;
     background-color: #7058f9;
     z-index: 3;
+    top: 0;
 }
 
 #navbar {
@@ -27,12 +28,12 @@ header {
 
 .nav-item a {
     text-decoration: none;
-    color: var(--color-neutral-1);
+    color: #ffffff;
     font-weight: 600;
 }
 
 .nav-item.active a {
-    color: var(--color-neutral-1);
+    color: #d1d1d1;
     border-bottom: 3px solid #4400ff;
 }
 
