@@ -1,60 +1,114 @@
-$(document).ready(function() {
-    $('#mobile_btn').on('click', function () {
-        $('#mobile_menu').toggleClass('active');
-        $('#mobile_btn').find('i').toggleClass('fa-x');
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("header");
+    const mobileBtn = document.getElementById("mobile_btn");
+    const mobileMenu = document.getElementById("mobile_menu");
+    const navLinks = document.querySelectorAll(".nav-item a");
+    const sections = document.querySelectorAll("main section");
 
-    const sections = $('section');
-    const navItems = $('.nav-item');
-
-    $(window).on('scroll', function () {
-        const header = $('header');
-        const scrollPosition = $(window).scrollTop() - header.outerHeight();
-
-        let activeSectionIndex = 0;
-
-        if (scrollPosition <= 0) {
-            header.css('box-shadow', 'none');
+    function toggleHeaderShadow() {
+        if (window.scrollY > 10) {
+            header.classList.add("scrolled");
         } else {
-            header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.1');
+            header.classList.remove("scrolled");
         }
+    }
 
-        sections.each(function(i) {
-            const section = $(this);
-            const sectionTop = section.offset().top - 280;
-            const sectionBottom = sectionTop+ section.outerHeight();
+    function setActiveMenu() {
+        const headerHeight = header.offsetHeight;
+        const scrollPosition = window.scrollY + headerHeight + 80;
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                activeSectionIndex = i;
-                return false;
+        let currentSectionId = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionTop + sectionHeight
+            ) {
+                currentSectionId = section.getAttribute("id");
             }
-        })
+        });
 
-        navItems.removeClass('active');
-        $(navItems[activeSectionIndex]).addClass('active');
+        document.querySelectorAll(".nav-item").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        if (currentSectionId) {
+            document.querySelectorAll(`a[href="#${currentSectionId}"]`).forEach((link) => {
+                const parent = link.closest(".nav-item");
+                if (parent) {
+                    parent.classList.add("active");
+                }
+            });
+        }
+    }
+
+    if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+
+            const icon = mobileBtn.querySelector("i");
+            const isOpen = mobileMenu.classList.contains("active");
+
+            mobileBtn.setAttribute("aria-expanded", String(isOpen));
+
+            if (icon) {
+                icon.classList.toggle("fa-bars", !isOpen);
+                icon.classList.toggle("fa-xmark", isOpen);
+            }
+        });
+    }
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (mobileMenu.classList.contains("active")) {
+                mobileMenu.classList.remove("active");
+                mobileBtn.setAttribute("aria-expanded", "false");
+
+                const icon = mobileBtn.querySelector("i");
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            }
+        });
     });
 
-    ScrollReveal().reveal('#cta', {
-        origin: 'left',
-        duration: 2000,
-        distance: '20%'
+    window.addEventListener("scroll", () => {
+        toggleHeaderShadow();
+        setActiveMenu();
     });
 
-    ScrollReveal().reveal('.dish', {
-        origin: 'left',
-        duration: 2000,
-        distance: '20%'
-    });
+    toggleHeaderShadow();
+    setActiveMenu();
 
-    ScrollReveal().reveal('#testimonial_chef', {
-        origin: 'left',
-        duration: 1000,
-        distance: '20%'
-    })
+    if (typeof ScrollReveal !== "undefined") {
+        const sr = ScrollReveal({
+            distance: "40px",
+            duration: 1000,
+            easing: "ease",
+            reset: false
+        });
 
-    ScrollReveal().reveal('.feedback', {
-        origin: 'right',
-        duration: 1000,
-        distance: '20%'
-    })
+        sr.reveal("#cta", {
+            origin: "left",
+            interval: 120
+        });
+
+        sr.reveal("#banner", {
+            origin: "right"
+        });
+
+        sr.reveal(".plan-card", {
+            origin: "bottom",
+            interval: 120
+        });
+
+        sr.reveal(".feedback", {
+            origin: "bottom",
+            interval: 120
+        });
+    }
 });
