@@ -1,337 +1,412 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Corunet Telecomunicações</title>
-    
+
+    <meta
+        name="description"
+        content="Internet rápida, estável e com atendimento próximo. Conheça os planos da Corunet Telecomunicações para sua casa ou empresa."
+    />
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <link rel="icon" href="img/logo-corunet.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-
-            <div id="nav_logo">
-                <img src="img/png-corunet-branco.png" alt="imagem">
-            </div>
+    <header id="header">
+        <nav id="navbar" class="container">
+            <a id="nav_logo" href="#home" aria-label="Ir para o início">
+                <img src="img/png-corunet-branco.png" alt="Logo da Corunet" />
+            </a>
 
             <ul id="nav_list">
-                <li class="nav-item active">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#planos">Planos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Avaliações</a>
-                </li>
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#planos">Planos</a></li>
+                <li class="nav-item"><a href="#testimonials">Avaliações</a></li>
             </ul>
 
-            <button class="btn-default">
-                Contate
-            </button>
+            <a
+                class="btn-primary desktop-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20conhecer%20os%20planos%20da%20Corunet."
+            >
+                Contratar via WhatsApp
+            </a>
 
-            <button id="mobile_btn">
+            <button id="mobile_btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile_menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </nav>
 
         <div id="mobile_menu">
-
             <ul id="mobile_nav_list">
-                <li class="nav-item">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#planos">Planos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Avaliações</a>
-                </li>
+                <li class="nav-item"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#planos">Planos</a></li>
+                <li class="nav-item"><a href="#testimonials">Avaliações</a></li>
             </ul>
 
-            <button class="btn-default">
-                Contate
-            </button>
-
+            <a
+                class="btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20conhecer%20os%20planos%20da%20Corunet."
+            >
+                Contratar via WhatsApp
+            </a>
         </div>
-
-
     </header>
 
     <main id="content">
         <section id="home">
             <div class="shape"></div>
-            <div id="cta">
 
-                <h1 class="title">
-                    coru<span>net</span>
-                </h1>
+            <div class="container home-content">
+                <div id="cta">
+                    <span class="eyebrow">Tecnologia, estabilidade e atendimento de verdade</span>
 
-                <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Reiciendis qui enim quo. Laudantium deserunt quod temporibus minima cupiditate neque, harum, error quaerat alias optio vel aliquid excepturi esse maiores nemo!
+                    <h1 class="title">
+                        Internet rápida e estável para sua casa ou empresa
+                    </h1>
+
+                    <p class="description">
+                        A Corunet conecta você à nova era digital com planos acessíveis, suporte próximo e desempenho confiável para trabalho, estudos, entretenimento e conexão no dia a dia.
+                    </p>
+
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Alta estabilidade</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>Suporte local humanizado</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Manutenção no mesmo dia</span>
+                        </div>
+                    </div>
+
+                    <div id="cta_buttons">
+                        <a href="#planos" class="btn-primary">
+                            Ver planos
+                        </a>
+
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20atendimento%20da%20Corunet."
+                            id="phone_button"
+                        >
+                            <span class="phone-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span>11 95131-2325</span>
+                        </a>
+                    </div>
+
+                    <div class="social-media-buttons">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://wa.me/5511951312325"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.instagram.com/corunet_comunicacoes/"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="banner">
+                    <img src="img/Funcionario-corunet.png" alt="Mascote da Corunet" />
+                </div>
+            </div>
+        </section>
+
+        <section id="planos" class="section">
+            <div class="container">
+                <h2 class="section-title">Planos</h2>
+                <h3 class="section-subtitle">Escolha o plano ideal para o seu perfil</h3>
+                <p class="section-description">
+                    Planos com excelente custo-benefício, suporte local humanizado e manutenção no mesmo dia para você navegar com mais tranquilidade.
                 </p>
 
-                <div id="cta_buttons">
-                    <a href="#" class="btn-default">
-                        Ver Planos
-                    </a>
+                <div id="plans_grid">
+                    <article class="plan-card bronze">
+                        <div class="plan-tag">Bronze</div>
 
-                    <a href="tel:+5511951312325" id="phone_button">
-                        <button class="btn-default">
-                            <i class="fa-solid fa-phone"></i>
-                        </button>
-                        11 95131-2325
-                    </a>
+                        <img src="img/png-corunet-colorido.png" alt="Logo Corunet" class="plan-image" />
+
+                        <h4 class="plan-title">100 MB</h4>
+                        <p class="plan-description">
+                            Ótima opção para navegação diária, redes sociais, estudos e uso doméstico com estabilidade.
+                        </p>
+
+                        <ul class="plan-benefits">
+                            <li>Suporte local humanizado</li>
+                            <li>Manutenção no mesmo dia</li>
+                            <li>Ideal para uso residencial</li>
+                        </ul>
+
+                        <div class="plan-price-area">
+                            <span class="plan-price">R$ 69,99</span>
+                            <a
+                                class="btn-secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Bronze%20de%20100%20MB."
+                            >
+                                Contratar
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plan-card silver">
+                        <div class="plan-tag">Prata</div>
+
+                        <img src="img/png-corunet-colorido.png" alt="Logo Corunet" class="plan-image" />
+
+                        <h4 class="plan-title">200 MB</h4>
+                        <p class="plan-description">
+                            Perfeito para quem assiste, trabalha e mantém vários dispositivos conectados com mais folga.
+                        </p>
+
+                        <ul class="plan-benefits">
+                            <li>Suporte local humanizado</li>
+                            <li>Manutenção no mesmo dia</li>
+                            <li>Mais conforto para a rotina</li>
+                        </ul>
+
+                        <div class="plan-price-area">
+                            <span class="plan-price">R$ 89,99</span>
+                            <a
+                                class="btn-secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Prata%20de%20200%20MB."
+                            >
+                                Contratar
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plan-card gold featured">
+                        <div class="plan-tag featured-tag">Ouro</div>
+
+                        <img src="img/png-corunet-colorido.png" alt="Logo Corunet" class="plan-image" />
+
+                        <h4 class="plan-title">300 MB</h4>
+                        <p class="plan-description">
+                            Plano com excelente equilíbrio entre preço e desempenho para famílias e usuários mais exigentes.
+                        </p>
+
+                        <ul class="plan-benefits">
+                            <li>Suporte local humanizado</li>
+                            <li>Manutenção no mesmo dia</li>
+                            <li>Melhor custo-benefício</li>
+                        </ul>
+
+                        <div class="plan-price-area">
+                            <span class="plan-price">R$ 109,99</span>
+                            <a
+                                class="btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Ouro%20de%20300%20MB."
+                            >
+                                Contratar
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plan-card platinum">
+                        <div class="plan-tag">Platina</div>
+
+                        <img src="img/png-corunet-colorido.png" alt="Logo Corunet" class="plan-image" />
+
+                        <h4 class="plan-title">400 MB</h4>
+                        <p class="plan-description">
+                            Excelente para casas com muitos dispositivos, streaming em alta qualidade e uso mais intenso.
+                        </p>
+
+                        <ul class="plan-benefits">
+                            <li>Suporte local humanizado</li>
+                            <li>Manutenção no mesmo dia</li>
+                            <li>Mais desempenho e estabilidade</li>
+                        </ul>
+
+                        <div class="plan-price-area">
+                            <span class="plan-price">R$ 129,99</span>
+                            <a
+                                class="btn-secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Platina%20de%20400%20MB."
+                            >
+                                Contratar
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plan-card diamond">
+                        <div class="plan-tag">Diamante</div>
+
+                        <img src="img/png-corunet-colorido.png" alt="Logo Corunet" class="plan-image" />
+
+                        <h4 class="plan-title">600 MB</h4>
+                        <p class="plan-description">
+                            Para quem quer o máximo de velocidade e folga de desempenho para toda a casa ou empresa.
+                        </p>
+
+                        <ul class="plan-benefits">
+                            <li>Suporte local humanizado</li>
+                            <li>Manutenção no mesmo dia</li>
+                            <li>Máxima performance da categoria</li>
+                        </ul>
+
+                        <div class="plan-price-area">
+                            <span class="plan-price">R$ 149,99</span>
+                            <a
+                                class="btn-secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Diamante%20de%20600%20MB."
+                            >
+                                Contratar
+                            </a>
+                        </div>
+                    </article>
                 </div>
-
-                <div class="social-media-buttons">
-                    <a href="">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-
-                    <a target="_blank" href="https://www.instagram.com/corunet_comunicacoes/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <div id="banner">
-                <img src="img/png-corunet-branco.png" alt="">
             </div>
         </section>
 
-        <section id="planos">
-            <h2 class="section-title">Planos</h2>
-            <h3 class="section-subtitle">Nossas ofertas especiais</h3>
+        <section id="testimonials" class="section">
+            <div class="container testimonials-wrapper">
+                <img src="img/Funcionario-corunet.png" id="testimonial_chef" alt="Mascote da Corunet" />
 
-            <div id="dishes">
+                <div id="testimonials_content">
+                    <h2 class="section-title">Depoimentos</h2>
+                    <h3 class="section-subtitle">Quem contrata, recomenda</h3>
+                    <p class="section-description">
+                        A confiança do cliente é parte central da marca. Aqui, a proposta é entregar velocidade, estabilidade e um atendimento que realmente resolve.
+                    </p>
 
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
+                    <div id="feedbacks">
+                        <article class="feedback">
+                            <img src="img/ana.jpg" class="feedback-avatar" alt="Foto de cliente" />
+
+                            <div class="feedback-content">
+                                <p class="feedback-header">
+                                    <strong>Ana Henriques</strong>
+                                    <span class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+                                <p class="feedback-location">Cliente residencial</p>
+                                <p>
+                                    “Atendimento muito rápido e internet estável. A instalação foi tranquila e o suporte respondeu com agilidade quando precisei.”
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="feedback">
+                            <img src="img/victor.jpg" class="feedback-avatar" alt="Foto de cliente" />
+
+                            <div class="feedback-content">
+                                <p class="feedback-header">
+                                    <strong>Victor Rodrigues</strong>
+                                    <span class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+                                <p class="feedback-location">Cliente Corunet</p>
+                                <p>
+                                    “Gostei da estabilidade e da proposta da empresa. O visual transmite tecnologia e o serviço passa mais confiança do que provedores genéricos.”
+                                </p>
+                            </div>
+                        </article>
                     </div>
 
-                    <img src="img/png-corunet-colorido.png" alt="">
-
-                    <h3 class="dish-title">
-                        20 mega
-                    </h3>
-
-                    <span class="dish-description">
-                        Ideal para quem precisa navegar e usar redes sociais no dia a dia.
-                    </span>
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>500+</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4>R$60,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
+                    <a
+                        class="btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://wa.me/5511951312325?text=Ol%C3%A1%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20planos%20da%20Corunet."
+                    >
+                        Falar com a Corunet
+                    </a>
                 </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="img/png-corunet-colorido.png" alt="">
-
-                    <h3 class="dish-title">
-                        40 mega
-                    </h3>
-
-                    <span class="dish-description">
-                        Perfeito para assistir vídeos e se manter sempre conectado 
-                    </span>
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>500+</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4>R$75,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="img/png-corunet-colorido.png" alt="">
-
-                    <h3 class="dish-title">
-                        60 mega
-                    </h3>
-
-                    <span class="dish-description">
-                        Excelente para jogar online e conectar vários dispositivos sem travar.
-                    </span>
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>500+</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4>R$100,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="img/png-corunet-colorido.png" alt="">
-
-                    <h3 class="dish-title">
-                        100 mega
-                    </h3>
-
-                    <span class="dish-description">
-                        Pra você que quer desfrutar o máximo da nossa tecnologia com alta velocidade. 
-                    </span>
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>500+</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4>R$120,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <img src="img/Funcionario-corunet.png" id="testimonial_chef" alt="">
-
-            <div id="testimonials_content">
-                <h2 class="section-title">
-                    Depoimentos
-                </h2>
-                <h3 class="section-subtitle">
-                    O que os clientes falam sobre nós
-                </h3>
-
-                <div id="feedbacks">
-                    <div class="feedback">
-                        <img src="img/ana.jpg" class="feedback-avatar" alt="">
-
-                        <div class="feedback-content">
-                            <p>
-                                <b>Ana Henriques</b>
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <p>
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo vitae"
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="feedback">
-                        <img src="img/victor.jpg" class="feedback-avatar" alt="">
-
-                        <div class="feedback-content">
-                            <p>
-                                <b>Victor Rodrigues</b>
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <p>
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo vitae"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn-default">
-                    Ver mais avaliações
-                </button>
             </div>
         </section>
     </main>
 
     <footer>
-        <img src="img/wave (2).svg" alt="">
+        <img src="img/wave (2).svg" alt="" class="footer-wave" />
 
-        <div id="footer_items">
+        <div id="footer_items" class="container">
             <span id="copyright">
-                &copy 2025 Corunet Telecomunicações
+                &copy; 2025 Corunet Telecomunicações
             </span>
 
-                <div class="social-media-buttons">
-                    <a href="">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+            <div class="social-media-buttons">
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://wa.me/5511951312325"
+                    aria-label="WhatsApp"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
 
-                    <a target="_blank" href="https://www.instagram.com/corunet_comunicacoes/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/corunet_comunicacoes/"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                    <a href="">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </div>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
     <script src="javascript/script.js"></script>
-
 </body>
 </html>
