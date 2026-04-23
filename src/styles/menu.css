@@ -1,89 +1,219 @@
 #planos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 85px);
+    background: transparent;
 }
 
-#planos h2 {
-    color: #ffd000;
+#planos .container {
+    max-width: 1320px;
 }
 
-#dishes {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 32px;
+#planos .section-description {
+    margin-top: 8px;
+    max-width: 780px;
 }
 
-.dish img {
-    width: 200px;
-
+.plans-top-benefits {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
 }
 
-.dish {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    gap: 18px;
-    width: 25%;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.dish-heart {
-    position: absolute;
-    background-color: var(--color-primary-2);
+.top-benefit {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.563rem;
-    color: #fff9ea;
-    width: 70px;
-    height: 70px;
-    right: -10px;
-    top: -10px;
-    border-radius: 0px 37.5px 0px 42.5px;
-}
-
-.dish-description {
-    color: #434343;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 22px rgba(17, 24, 39, 0.06);
+    color: var(--color-primary);
+    font-weight: 600;
     text-align: center;
 }
 
-.dish-rate i {
-    color: #e0a209;
+.top-benefit i {
+    color: var(--color-accent-strong);
+    font-size: 1rem;
 }
 
-.dish-price{
+#plans_grid {
+    margin-top: 38px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+#plans_grid .plan-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+#plans_grid .plan-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.plan-card {
+    grid-column: span 2;
+    position: relative;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--color-shadow);
+    padding: 20px 18px;
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    overflow: hidden;
+    min-height: 100%;
 }
 
-@media screen and (max-width: 1170px) {
-    #dishes {
-        flex-wrap: wrap;
-        justify-content: center;
+.plan-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 45px rgba(17, 24, 39, 0.14);
+}
+
+.plan-card.featured {
+    transform: scale(1.02);
+    border-width: 2px;
+    border-color: rgba(201, 168, 76, 0.45);
+    box-shadow: 0 22px 44px rgba(201, 168, 76, 0.20);
+}
+
+.plan-tag {
+    width: fit-content;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    background: rgba(26, 39, 68, 0.08);
+    color: var(--color-primary);
+}
+
+.featured-tag {
+    background: linear-gradient(135deg, #f4d57a, #c9a84c);
+    color: #3a2a00;
+}
+
+.plan-image {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.plan-title {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.plan-description {
+    color: var(--color-text-soft);
+    line-height: 1.55;
+    font-size: 0.9rem;
+}
+
+.plan-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.plan-benefits li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--color-text);
+    line-height: 1.45;
+    font-size: 0.9rem;
+}
+
+.plan-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent-strong);
+    font-weight: 800;
+}
+
+.plan-price-area {
+    margin-top: auto;
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.plan-spotlight {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.14), rgba(201, 168, 76, 0.06));
+    color: var(--color-primary);
+    border: 1px solid rgba(201, 168, 76, 0.28);
+    border-radius: 14px;
+    padding: 10px 12px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.plan-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+}
+
+.plan-card.bronze {
+    border-top: 5px solid #9c6b3f;
+}
+
+.plan-card.silver {
+    border-top: 5px solid #9aa3ad;
+}
+
+.plan-card.gold {
+    border-top: 5px solid #d4af37;
+}
+
+.plan-card.platinum {
+    border-top: 5px solid #7f8ea3;
+}
+
+.plan-card.diamond {
+    border-top: 5px solid #4fc3f7;
+}
+
+@media screen and (max-width: 1280px) {
+    #plans_grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
     }
 
-    .dish {
-        width: calc(50% - 12px);
+    .plan-card,
+    #plans_grid .plan-card:nth-child(4),
+    #plans_grid .plan-card:nth-child(5) {
+        grid-column: auto;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .dish {
-        width: 100%;
+@media screen and (max-width: 900px) {
+
+    .plans-top-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    #plans_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    #planos .section-subtitle {
-        text-align: center;
+    .plan-card.featured {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #plans_grid {
+        grid-template-columns: 1fr;
     }
 }
